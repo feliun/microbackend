@@ -1,6 +1,6 @@
 module.exports = () => {
 
-  let collections = {
+  const collections = {
     test: null
   };
 
