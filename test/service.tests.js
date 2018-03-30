@@ -1,6 +1,6 @@
 const expect = require('expect.js');
 const system = require('../system');
-const supertest = require('supertest-as-promised');
+const supertest = require('supertest');
 
 describe('Service Tests', () => {
   let request;
@@ -9,7 +9,7 @@ describe('Service Tests', () => {
   before(done => {
     sys = system().start((err, { app }) => {
       if (err) return done(err);
-      request = supertest(Promise)(app);
+      request = supertest(app);
       done();
     });
   });
@@ -22,6 +22,5 @@ describe('Service Tests', () => {
       .expect(200)
       .then((response) => {
         expect(response.headers['content-type']).to.equal('application/json; charset=utf-8');
-      })
-  );
+      }));
 });

@@ -1,5 +1,1 @@
-module.exports = {
-  logger: {
-    transport: 'console'
-  }
-};
+module.exports = { logger: { transport: 'console' } };

@@ -11,17 +11,16 @@ const colours = {
   info: chalk.white,
   warn: chalk.yellow,
   error: chalk.red,
-  default: chalk.white
+  default: chalk.white,
 };
 
 module.exports = () => {
-
   const onMessage = (event) => {
     const details = R.pluck(event, []);
     const data = R.merge(event, {
       displayTracer: R.has('tracer', event) ? event.tracer.substr(0, 6) : '------',
       displayLevel: event.level.toUpperCase(),
-      details: Object.keys(details).length ? `\n ${JSON.stringify(details, null, 2)}` : ''
+      details: Object.keys(details).length ? `\n ${JSON.stringify(details, null, 2)}` : '',
     });
     const colour = colours[event.level] || colours.default;
     const log = console[event.level] || console.info; // eslint-disable-line no-console

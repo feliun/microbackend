@@ -1,5 +1,1 @@
-module.exports = {
-  logger: {
-    transport: null
-  }
-};
+module.exports = { logger: { transport: null } };

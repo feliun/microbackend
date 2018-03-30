@@ -2,7 +2,6 @@ const bunyan = require('bunyan');
 const R = require('ramda');
 
 module.exports = () => {
-
   let log;
 
   const onMessage = (event) => {
