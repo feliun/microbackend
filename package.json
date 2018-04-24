@@ -1,7 +1,7 @@
 {
-  "name": "basic-microservice",
+  "name": "chatbot",
   "version": "1.0.3",
-  "description": "An example microservice using systemic, confabulous and prepper",
+  "description": "A JS chatbot talking to a NodeJS proxy",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -18,7 +18,8 @@
     "systemic",
     "confabulous",
     "prepper",
-    "example"
+    "chatbot",
+    "bot"
   ],
   "author": "GuideSmiths Ltd",
   "license": "ISC",
